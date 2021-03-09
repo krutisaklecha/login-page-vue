@@ -52,10 +52,11 @@ export default {
   },
   methods:{
     signIn(){
-      this.$store.dispatch('loginUser',this.user)
-      this.$router.push({
-        name: 'Dashboard',
-      });
+      this.$store.dispatch('AUTH_REQUEST',this.user)
+
+            this.$router.push('Dashboard')
+
+
    /*   this.$store.dispatch('loginUser',this.user)
       .then((response) =>{
         console.log(response)
